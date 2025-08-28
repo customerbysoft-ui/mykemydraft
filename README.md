@@ -4,7 +4,6 @@ Keeps your original design the same. Adds:
 1) Working contact form -> send-mail.php (POST)
 2) Floating chatbot widget with auto replies
 ============================= -->
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
