@@ -517,27 +517,3 @@ Keeps your original design the same. Adds:
   </script>
 </body>
 </html>
-
-
-<!-- =============================
-FILE 2: send-mail.php  (place in same folder as index.html)
-Uses native PHP mail(). For best deliverability, set $to to your email.
-If your host blocks mail(), switch to SMTP version below (FILE 3).
-============================= -->
-<?php /* send-mail.php */
-if($_SERVER['REQUEST_METHOD']!=='POST'){ header('Location: index.html'); exit; }
-// Basic spam honeypot
-if(!empty($_POST['_hp'])){ http_response_code(200); echo 'OK'; exit; }
-function clean($v){ return trim(filter_var($v,FILTER_SANITIZE_STRING)); }
-$name=clean($_POST['name']??'');
-$email=filter_var($_POST['email']??'',FILTER_VALIDATE_EMAIL);
-$phone=clean($_POST['phone']??'');
-$service=clean($_POST['service']??'');
-$message=trim($_POST['message']??'');
-if(!$name||!$email||!$service||!$message){ http_response_code(400); echo 'Missing required fields.'; exit; }
-$to='customerbysoft@gmail.com'; // TODO: change to your receiving email
-$subject='New Enquiry from Bysoft Website';
-$ip=$_SERVER['REMOTE_ADDR']??'unknown';
-$ua=$_SERVER['HTTP_USER_AGENT']??'unknown';
-$body="New enquiry from website:\n\n".
-      "Name: $name\nEmail: $email\nP
