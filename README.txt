@@ -1,37 +1,46 @@
-BYsoft PHP E-commerce (Simple)
+<?php
+require __DIR__ . '/config.php';
 
-Requirements
-- PHP 8.1+
-- MySQL 5.7+ / MariaDB 10.4+
-- Apache/Nginx with PHP enabled
-- File uploads enabled (for product images)
+// Handle Add to Cart
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_to_cart'])) {
+    csrf_check();
+    $pid = (int)($_POST['product_id'] ?? 0);
+    if ($pid > 0) {
+        $_SESSION['cart'][$pid] = ($_SESSION['cart'][$pid] ?? 0) + 1;
+        header('Location: cart.php');
+        exit;
+    }
+}
 
-Setup
-1) Create database and tables:
-   - Import db.sql into your MySQL server.
-   - This creates `bysoft_shop` DB and an admin user:
-     Email: admin@bysoft.local
-     Password: admin123  (change after first login)
+// Fetch products
+$stmt = $pdo->query("SELECT id, name, description, price, image FROM products ORDER BY id DESC");
+$products = $stmt->fetchAll();
 
-2) Configure DB credentials:
-   - Edit config.php and set $DB_USER, $DB_PASS as per your server.
-
-3) Deploy files:
-   - Copy all files to your web root (e.g., htdocs/bysoft or /var/www/html).
-   - Ensure the `uploads/` folder is writable by the webserver user.
-
-4) Use the app:
-   - Open http://your-domain/index.php to see the storefront.
-   - Open http://your-domain/admin/login.php to login to admin panel.
-   - Add products from Admin > Add Product. They appear on Home.
-   - Customers can add to cart and place a demo order (no payment gateway).
-
-Notes
-- This is a minimal secure baseline using PDO prepared statements & CSRF tokens.
-- For production add:
-  * HTTPS
-  * Stronger auth & session hardening
-  * Pagination/search on products
-  * Payment gateway integration (Razorpay/Stripe)
-  * Order management (status updates)
-  * Email notifications
+include __DIR__ . '/header.php';
+?>
+<h1 class="mb-4">Welcome to Bysoft Shop</h1>
+<div class="row g-4">
+<?php foreach ($products as $p): ?>
+  <div class="col-12 col-sm-6 col-lg-3">
+    <div class="card h-100 p-3">
+      <img class="product-img mb-3" src="<?php echo htmlspecialchars($p['image'] ?: '/assets/placeholder.png'); ?>" alt="<?php echo htmlspecialchars($p['name']); ?>">
+      <h5 class="mb-1"><?php echo htmlspecialchars($p['name']); ?></h5>
+      <p class="small text-secondary"><?php echo htmlspecialchars($p['description']); ?></p>
+      <div class="d-flex justify-content-between align-items-center">
+        <span class="price">₹<?php echo number_format((float)$p['price'], 2); ?></span>
+        <form method="post">
+          <?php csrf_input(); ?>
+          <input type="hidden" name="product_id" value="<?php echo (int)$p['id']; ?>">
+          <button class="btn btn-sm btn-primary" name="add_to_cart">Add to Cart</button>
+        </form>
+      </div>
+    </div>
+  </div>
+<?php endforeach; ?>
+<?php if (empty($products)): ?>
+  <div class="col-12">
+    <div class="alert alert-info">No products yet. Login to Admin and add some!</div>
+  </div>
+<?php endif; ?>
+</div>
+<?php include __DIR__ . '/footer.php'; ?>
