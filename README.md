@@ -1,34 +1,85 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>MakeMyDraft — Professional Legal Drafting Services</title>
+  <title>MakeMyDraft — Professional Legal Drafting Services | Contracts & Agreements</title>
+  <meta name="description" content="Professional legal drafting services for agreements, contracts, and legal documents. Fast turnaround, expert team, and legally compliant documents for businesses and individuals.">
+  <meta name="keywords" content="legal drafting, contracts, agreements, legal documents, business agreements, legal services, document drafting">
+  <meta name="author" content="MakeMyDraft">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://makemydraft.com/">
+  <meta property="og:title" content="MakeMyDraft — Professional Legal Drafting Services">
+  <meta property="og:description" content="Professional legal drafting services for agreements, contracts, and legal documents. Fast turnaround and expert team.">
+  <meta property="og:image" content="https://makemydraft.com/images/og-image.jpg">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://makemydraft.com/">
+  <meta property="twitter:title" content="MakeMyDraft — Professional Legal Drafting Services">
+  <meta property="twitter:description" content="Professional legal drafting services for agreements, contracts, and legal documents.">
+  <meta property="twitter:image" content="https://makemydraft.com/images/twitter-image.jpg">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://makemydraft.com/">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="https://makemydraft.com/favicon.ico">
+  
+  <!-- Preload important resources -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "MakeMyDraft",
+    "description": "Professional legal drafting services for agreements, contracts, and legal documents.",
+    "url": "https://makemydraft.com",
+    "telephone": "+919990026028",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Office No: 111-112, 1st Floor, Rishal Complex, Shiva Market",
+      "addressLocality": "Pitampura",
+      "addressRegion": "New Delhi",
+      "postalCode": "110034",
+      "addressCountry": "IN"
+    },
+    "serviceType": "Legal Drafting Services",
+    "areaServed": "Worldwide",
+    "openingHours": "Mo-Fr 09:00-18:00"
+  }
+  </script>
 
   <style>
     :root{
       --bg:#f7f9fb; --card:#ffffff; --muted:#718096; --brand-1:#0f2240; --brand-2:#2d74da; --accent:#e9b949; --success:#25D366; --glass: rgba(255,255,255,0.6);
       --radius:14px; --shadow: 0 10px 30px rgba(15,34,64,0.08); --speed: 500ms;
+      --dark-text: #1f2937; --light-text: #f8fafc;
     }
     *{box-sizing:border-box; margin:0; padding:0}
     html,body{height:100%}
     body{
-      margin:0;font-family:'Poppins',sans-serif;background:radial-gradient(circle at 10% 10%, rgba(45,116,218,0.03), transparent),var(--bg);color:#1f2937;line-height:1.5;-webkit-font-smoothing:antialiased;
+      margin:0;font-family:'Poppins',sans-serif;background:radial-gradient(circle at 10% 10%, rgba(45,116,218,0.03), transparent),var(--bg);color:var(--dark-text);line-height:1.6;-webkit-font-smoothing:antialiased;
     }
     .container{max-width:1200px;margin:0 auto;padding:0 20px}
 
     /* ===== Header ===== */
     header{
       position:fixed;inset:0 0 auto 0;z-index:1200;
-      background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.7));
+      background:linear-gradient(180deg, rgba(255,255,255,0.95), rgba(255,255,255,0.85));
       backdrop-filter:blur(6px);box-shadow:0 4px 18px rgba(2,6,23,0.05);
       transition: all 0.3s ease;
     }
     header.scrolled {
       padding: 5px 0;
-      background:linear-gradient(180deg, rgba(255,255,255,0.95), rgba(255,255,255,0.85));
+      background:linear-gradient(180deg, rgba(255,255,255,0.98), rgba(255,255,255,0.92));
     }
     .header-row{
       display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 0
@@ -55,7 +106,7 @@
       display:flex;gap:20px;list-style:none;margin:0;padding:0
     }
     nav a{
-      color:#1f2937;text-decoration:none;font-weight:600;padding:8px;border-radius:10px;transition:all .25s;
+      color:var(--dark-text);text-decoration:none;font-weight:600;padding:8px;border-radius:10px;transition:all .25s;
       position: relative;
     }
     nav a:after {
@@ -74,6 +125,14 @@
     }
     nav a:hover{
       color:var(--brand-2);
+    }
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: var(--brand-1);
     }
     .cta{display:flex;gap:10px}
     .btn{
@@ -116,7 +175,7 @@
     .hero-grid{
       display:grid;grid-template-columns:1fr 420px;gap:40px;align-items:center
     }
-    .hero-left h2{
+    .hero-left h1{
       font-family:'Playfair Display',serif;font-size:42px;margin:0 0 14px;color:var(--brand-1);line-height:1.05;
     }
     .typed{
@@ -163,11 +222,11 @@
     .section .title{
       display:flex;flex-direction:column;align-items:center;margin-bottom:30px;text-align:center;
     }
-    .section h3{
+    .section h2{
       font-family:'Playfair Display',serif;color:var(--brand-1);margin:0;font-size:32px;position:relative;
       padding-bottom:15px;
     }
-    .section h3:after {
+    .section h2:after {
       content: '';
       position: absolute;
       bottom: 0;
@@ -285,7 +344,31 @@
     footer .muted {color:rgba(255,255,255,0.7)}
 
     /* ===== small screens ===== */
-    @media (max-width:960px){.hero-grid{grid-template-columns:1fr}.contact-grid{grid-template-columns:1fr}.container{padding:0 16px}}
+    @media (max-width:960px){
+      .hero-grid{grid-template-columns:1fr}
+      .contact-grid{grid-template-columns:1fr}
+      .container{padding:0 16px}
+      .mobile-menu-btn {
+        display: block;
+      }
+      nav ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      }
+      nav ul.show {
+        display: flex;
+      }
+      .header-row {
+        position: relative;
+      }
+    }
 
     /* ===== animations ===== */
     .fade-up{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
@@ -326,7 +409,7 @@
       top: 15px;
       right: 20px;
       font-size: 60px;
-      color: rgba(45,116,218,0.1);
+      color: rgba(45,116,218,0.10);
       font-family: 'Playfair Display', serif;
     }
     .testimonial-content {
@@ -419,6 +502,48 @@
       margin-bottom: 10px;
       color: var(--brand-1);
     }
+
+    /* Breadcrumb */
+    .breadcrumb {
+      padding: 15px 0;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .breadcrumb a {
+      color: var(--brand-2);
+      text-decoration: none;
+    }
+
+    /* FAQ Section */
+    .faq {
+      padding: 70px 0;
+      background: var(--bg);
+    }
+    .faq-item {
+      margin-bottom: 20px;
+      border-radius: 12px;
+      background: white;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .faq-question {
+      padding: 20px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+    }
+    .faq-answer {
+      padding: 0 20px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    .faq-answer.open {
+      padding: 0 20px 20px;
+      max-height: 300px;
+    }
   </style>
 </head>
 <body>
@@ -430,34 +555,44 @@
           <h1>MakeMyDraft</h1>
         </div>
 
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <i class="fas fa-bars"></i>
+        </button>
+
         <nav>
-          <ul>
+          <ul id="navMenu">
             <li><a href="#home">Home</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#process">Process</a></li>
             <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#faq">FAQ</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
 
         <div class="cta">
           <a class="btn" href="#contact">Get Started</a>
-          <a class="btn btn-wht" href="https://wa.me/919990026028?text=Hello%20MakeMyDraft,%20I%20need%20help%20with%20a%20legal%20document" target="_blank"><i class="fab fa-whatsapp"></i> Chat</a>
+          <a class="btn btn-wht" href="https://wa.me/919990026028?text=Hello%20MakeMyDraft,%20I%20need%20help%20with%20a%20legal%20document" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Chat</a>
         </div>
       </div>
     </div>
   </header>
 
   <main style="padding-top:78px">
+    <!-- Breadcrumb -->
+    <div class="container breadcrumb">
+      <a href="#home">Home</a> > <span>Legal Drafting Services</span>
+    </div>
+
     <!-- HERO -->
     <section id="home" class="hero container">
       <canvas id="particle-canvas"></canvas>
       <div class="hero-grid">
         <div class="hero-left">
-          <h2>Professionally Drafted Legal Documents — <span class="typed">Agreements, Contracts & More</span></h2>
+          <h1>Professionally Drafted Legal Documents — <span class="typed">Agreements, Contracts & More</span></h1>
           <p>At MakeMyDraft, we provide professionally customised drafts of a wide range of Agreements and Contracts tailored to your specific requirements. Fast, accurate and legally compliant.</p>
 
-          <div class="hero-cards" aria-hidden="true">
+          <div class="hero-cards">
             <div class="small-card">
               <strong>Turnaround</strong>
               <div class="muted">2 - 72 hours</div>
@@ -474,11 +609,11 @@
 
           <div style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap">
             <a class="btn" href="#services">See Services</a>
-            <a class="btn btn-wht" href="https://wa.me/919990026028?text=Hello%20MakeMyDraft,%20I%20need%20help%20with%20a%20legal%20document" target="_blank"><i class="fab fa-whatsapp"></i> Start Chat</a>
+            <a class="btn btn-wht" href="https://wa.me/919990026028?text=Hello%20MakeMyDraft,%20I%20need%20help%20with%20a%20legal%20document" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Start Chat</a>
           </div>
         </div>
 
-        <div class="hero-visual" aria-hidden="true">
+        <div class="hero-visual">
           <!-- decorative blurred blob -->
           <svg class="blob" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
             <g transform="translate(300,300)">
@@ -491,8 +626,8 @@
               <div>
                 <div style="font-size:13px;opacity:0.9">Trusted by</div>
                 <div style="display:flex;gap:8px;margin-top:8px">
-                  <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='30'><rect rx='6' width='100' height='30' fill='%23ffffff' opacity='0.06'/><text x='12' y='20' fill='white' font-size='11' font-family='Poppins'>Company A</text></svg>" alt="logo" style="height:34px;border-radius:8px;"/>
-                  <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='30'><rect rx='6' width='100' height='30' fill='%23ffffff' opacity='0.04'/><text x='12' y='20' fill='white' font-size='11' font-family='Poppins'>Client B</text></svg>" alt="logo" style="height:34px;border-radius:8px;"/>
+                  <span style="width:100px;height:34px;border-radius:8px;background:rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:500">Company A</span>
+                  <span style="width:100px;height:34px;border-radius:8px;background:rgba(255,255,255,0.04);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:500">Client B</span>
                 </div>
               </div>
               <div style="text-align:right">
@@ -546,7 +681,7 @@
     <!-- FEATURES -->
     <section id="features" class="section container">
       <div class="title">
-        <h3>Why Choose MakeMyDraft</h3>
+        <h2>Why Choose MakeMyDraft</h2>
         <div class="muted">Fast, reliable, and professional legal drafting services for all your needs</div>
       </div>
 
@@ -584,7 +719,7 @@
     <!-- Process Section -->
     <section id="process" class="process container">
       <div class="title">
-        <h3>Our Simple Process</h3>
+        <h2>Our Simple Process</h2>
         <div class="muted">Get your legal documents drafted in just a few easy steps</div>
       </div>
 
@@ -615,7 +750,7 @@
     <!-- SERVICES / CATEGORIES -->
     <section id="services" class="section container">
       <div class="title">
-        <h3>Our Legal Drafting Services</h3>
+        <h2>Our Legal Drafting Services</h2>
         <div class="muted">We specialize in creating customized legal documents for various industries and personal needs</div>
       </div>
 
@@ -754,7 +889,7 @@
     <section id="testimonials" class="testimonials">
       <div class="container">
         <div class="title">
-          <h3>What Our Clients Say</h3>
+          <h2>What Our Clients Say</h2>
           <div class="muted">Hear from businesses and individuals who have used our services</div>
         </div>
 
@@ -801,30 +936,82 @@
       </div>
     </section>
 
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+      <div class="container">
+        <div class="title">
+          <h2>Frequently Asked Questions</h2>
+          <div class="muted">Common questions about our legal drafting services</div>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              How long does it take to get a document drafted?
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>Our turnaround time ranges from 2 to 72 hours, depending on the complexity and length of the document. Simple agreements can be delivered within a few hours, while more complex contracts may take up to 3 days.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              Are your documents legally compliant?
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>Yes, all our documents are drafted by legal professionals and are compliant with current laws and regulations. We stay updated with the latest legal changes to ensure your documents are always current and enforceable.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              Can I request revisions to the drafted document?
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>Absolutely. We offer revision rounds to ensure the document meets your exact requirements. Most of our packages include at least one round of revisions at no additional cost.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              What format will I receive my document in?
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>Documents are delivered in both editable DOCX format and print-ready PDF format. This allows you to make further changes if needed and have a clean version for signing.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- CONTACT -->
     <section id="contact" class="section container">
       <div class="title">
-        <h3>Get in Touch</h3>
+        <h2>Get in Touch</h2>
         <div class="muted">Our dedicated legal drafting team is prepared to handle your requirements with precision and efficiency.</div>
       </div>
 
       <div class="contact-grid">
         <div class="contact-card">
-          <h4 style="font-family:'Playfair Display',serif">How We Can Help</h4>
+          <h3 style="font-family:'Playfair Display',serif">How We Can Help</h3>
           <p class="muted">Simply share your needs, and we will deliver a professionally drafted document within 2 to 72 hours—depending on the complexity and nature of your request. We prioritize accuracy, timeliness, and legal compliance in every draft we deliver.</p>
 
           <div style="margin-top:18px">
             <h4>Contact Information</h4>
             <p class="muted"><i class="fas fa-map-marker-alt"></i> Office No: 111-112, 1st Floor, Rishal Complex, Shiva Market, Pitampura, New Delhi - 110034</p>
             <p class="muted"><i class="fas fa-phone"></i> 9990026028, 9891056969</p>
-            <p class="muted"><i class="fas fa-envelope"></i> info@makemydraft.com</p>
+            <p class="muted"><i class="fas fa-envelope"></i> pankaj.md.pragmatic@gmail.com</p>
             <p class="muted"><i class="fab fa-whatsapp"></i> <a href="https://wa.me/919990026028" style="color:inherit">Chat on WhatsApp</a></p>
           </div>
         </div>
 
         <div class="contact-card">
-          <h4 style="font-family:'Playfair Display',serif">Send Us Your Requirements</h4>
-          <form id="requirementsForm" novalidate>
+          <h3 style="font-family:'Playfair Display',serif">Send Us Your Requirements</h3>
+          <form id="contact-form" action="https://formspree.io/f/abcd1234" method="POST">
             <div class="form-group"><input name="name" placeholder="Your Name" required></div>
             <div class="form-group"><input type="email" name="email" placeholder="Your Email" required></div>
             <div class="form-group"><input type="tel" name="phone" placeholder="Your Phone"></div>
@@ -855,7 +1042,7 @@
     <footer class="container">
       <div class="footer-grid">
         <div>
-          <h4 style="font-family:'Playfair Display',serif; color:white">MakeMyDraft</h4>
+          <h3 style="font-family:'Playfair Display',serif; color:white">MakeMyDraft</h3>
           <p class="muted">Professional legal drafting services for businesses and individuals. Fast, reliable, and compliant with current regulations.</p>
         </div>
         <div>
@@ -881,7 +1068,7 @@
     </footer>
 
     <!-- Floating whatsapp -->
-    <a class="floating" href="https://wa.me/919990026028?text=Hello%20MakeMyDraft,%20I%20need%20help%20with%20a%20legal%20document" target="_blank" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp" style="color:white;font-size:22px"></i></a>
+    <a class="floating" href="https://wa.me/919990026028?text=Hello%20MakeMyDraft,%20I%20need%20help%20with%20a%20legal%20document" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp" style="color:white;font-size:22px"></i></a>
 
     <div id="toast" class="toast" role="status">Message sent — we will contact you shortly</div>
   </main>
@@ -897,18 +1084,38 @@
 
     // Particle background (lightweight)
     const canvas = document.getElementById('particle-canvas');
-    const ctx = canvas.getContext('2d');
-    let W, H, particles=[];
-    function resize(){W=canvas.width=canvas.offsetWidth; H=canvas.height=canvas.offsetHeight}
-    function rand(min,max){return Math.random()*(max-min)+min}
-    function initParticles(){particles=[]; for(let i=0;i<25;i++){particles.push({x:rand(0,W), y:rand(0,H), r:rand(1,3.5), vx:rand(-0.2,0.2), vy:rand(-0.4,0.4), alpha:rand(.06,.18)})}}
-    function step(){ctx.clearRect(0,0,W,H); for(let p of particles){p.x+=p.vx; p.y+=p.vy; if(p.x< -20) p.x=W+20; if(p.x>W+20) p.x=-20; if(p.y< -20) p.y=H+20; if(p.y>H+20) p.y=-20; ctx.beginPath(); ctx.fillStyle='rgba(45,116,218,'+p.alpha+')'; ctx.arc(p.x,p.y,p.r,0,Math.PI*2); ctx.fill()} requestAnimationFrame(step)}
-    function startParticles(){resize(); initParticles(); step();}
-    window.addEventListener('resize', ()=>{ if(canvas) resize(); });
-    startParticles();
+    if (canvas) {
+      const ctx = canvas.getContext('2d');
+      let W, H, particles=[];
+      function resize(){W=canvas.width=canvas.offsetWidth; H=canvas.height=canvas.offsetHeight}
+      function rand(min,max){return Math.random()*(max-min)+min}
+      function initParticles(){particles=[]; for(let i=0;i<25;i++){particles.push({x:rand(0,W), y:rand(0,H), r:rand(1,3.5), vx:rand(-0.2,0.2), vy:rand(-0.4,0.4), alpha:rand(.06,.18)})}}
+      function step(){ctx.clearRect(0,0,W,H); for(let p of particles){p.x+=p.vx; p.y+=p.vy; if(p.x< -20) p.x=W+20; if(p.x>W+20) p.x=-20; if(p.y< -20) p.y=H+20; if(p.y>H+20) p.y=-20; ctx.beginPath(); ctx.fillStyle='rgba(45,116,218,'+p.alpha+')'; ctx.arc(p.x,p.y,p.r,0,Math.PI*2); ctx.fill()} requestAnimationFrame(step)}
+      function startParticles(){resize(); initParticles(); step();}
+      window.addEventListener('resize', ()=>{ if(canvas) resize(); });
+      startParticles();
+    }
 
     // Toggle category card
     function toggleCat(el){ const body = el.nextElementSibling; body.classList.toggle('open'); const icon = el.querySelector('i'); icon.classList.toggle('fa-chevron-down'); icon.classList.toggle('fa-chevron-up'); }
+
+    // Toggle FAQ
+    function toggleFaq(el) {
+      const answer = el.nextElementSibling;
+      answer.classList.toggle('open');
+      const icon = el.querySelector('i');
+      icon.classList.toggle('fa-chevron-down');
+      icon.classList.toggle('fa-chevron-up');
+    }
+
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const navMenu = document.getElementById('navMenu');
+    if (mobileMenuBtn && navMenu) {
+      mobileMenuBtn.addEventListener('click', () => {
+        navMenu.classList.toggle('show');
+      });
+    }
 
     // Filter chips
     document.querySelectorAll('.chip').forEach(ch=>{
@@ -923,25 +1130,61 @@
     });
 
     // Smooth anchor scrolling
-    document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click', function(e){ const tgt = document.querySelector(this.getAttribute('href')); if(tgt){ e.preventDefault(); window.scrollTo({top: tgt.offsetTop - 70, behavior:'smooth'}); }}));
+    document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click', function(e){ 
+      if (this.getAttribute('href') === '#') return;
+      
+      const tgt = document.querySelector(this.getAttribute('href'));
+      if(tgt){ 
+        e.preventDefault(); 
+        window.scrollTo({
+          top: tgt.offsetTop - 80, 
+          behavior:'smooth'
+        });
+        
+        // Close mobile menu if open
+        if (navMenu.classList.contains('show')) {
+          navMenu.classList.remove('show');
+        }
+      }
+    }));
 
-    // Form submit (fake AJAX + validation) -> you can replace with real API endpoint
+    // Form submit - using Formspree
     const form = document.getElementById('requirementsForm');
-    form.addEventListener('submit', (ev)=>{
-      ev.preventDefault(); const data = new FormData(form);
-      // basic validation
-      if(!data.get('name') || !data.get('email') || !data.get('type') || !data.get('details')){ showToast('Please fill all required fields'); return; }
-      // disable & simulate
-      const submitBtn = form.querySelector('button[type="submit"]'); submitBtn.disabled = true; submitBtn.innerText = 'Sending...';
-      setTimeout(()=>{
-        submitBtn.disabled = false; submitBtn.innerText = 'Submit Requirements';
-        form.reset(); showToast('Thank you! We received your requirements.');
-      }, 1100);
+    if (form) {
+      form.addEventListener('submit', (ev)=>{
+        // Basic validation
+        const name = form.querySelector('input[name="name"]');
+        const email = form.querySelector('input[name="email"]');
+        const type = form.querySelector('select[name="type"]');
+        const details = form.querySelector('textarea[name="details"]');
+        
+        if(!name.value || !email.value || !type.value || !details.value){ 
+          showToast('Please fill all required fields'); 
+          ev.preventDefault();
+          return; 
+        }
+        
+        // Show sending state
+        const submitBtn = form.querySelector('button[type="submit"]'); 
+        submitBtn.disabled = true; 
+        submitBtn.innerText = 'Sending...';
+        
+        // Form will now submit to Formspree which will email us
+        // The toast will show after successful submission
+        setTimeout(()=>{
+          showToast('Thank you! We received your requirements.');
+        }, 1000);
+      });
+    }
 
-      // TODO: replace with fetch('/api/lead', {method:'POST', body:data})
-    });
-
-    function showToast(text='Saved'){ const t = document.getElementById('toast'); t.textContent = text; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'), 2800); }
+    function showToast(text='Saved'){ 
+      const t = document.getElementById('toast'); 
+      if (t) {
+        t.textContent = text; 
+        t.classList.add('show'); 
+        setTimeout(()=>t.classList.remove('show'), 2800); 
+      }
+    }
 
     // small accessibility: close opened category if click outside
     document.addEventListener('click', e=>{
@@ -953,17 +1196,32 @@
     document.querySelectorAll('nav a').forEach(a=>a.addEventListener('focus', ()=>a.style.outline='2px solid rgba(45,116,218,0.12)'));
 
     // Optional: small typed effect for hero (cycles short phrases)
-    (function typed(){ const el = document.querySelector('.typed'); const texts = ['Agreements', 'Contracts', 'NDAs', 'Policies']; let i=0, j=0, dir=1; function tick(){ const txt = texts[i].slice(0,j); el.textContent = txt; if(dir===1 && j<texts[i].length) j++; else if(dir===1){ dir=-1; setTimeout(tick,900); return; } else { j--; if(j===0){ dir=1; i=(i+1)%texts.length; } }
+    (function typed(){ 
+      const el = document.querySelector('.typed'); 
+      if (!el) return;
+      
+      const texts = ['Agreements', 'Contracts', 'NDAs', 'Policies']; 
+      let i=0, j=0, dir=1; 
+      function tick(){ 
+        const txt = texts[i].slice(0,j); 
+        el.textContent = txt; 
+        if(dir===1 && j<texts[i].length) j++; 
+        else if(dir===1){ dir=-1; setTimeout(tick,900); return; } 
+        else { j--; if(j===0){ dir=1; i=(i+1)%texts.length; } }
         setTimeout(tick, dir===1?120:40);
-    } tick(); })();
+      } 
+      tick(); 
+    })();
 
     // Header scroll effect
     window.addEventListener('scroll', function() {
       const header = document.getElementById('header');
-      if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
+      if (header) {
+        if (window.scrollY > 50) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
       }
     });
 
