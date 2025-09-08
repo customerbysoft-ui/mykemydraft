@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -1011,7 +1010,7 @@
 
         <div class="contact-card">
           <h3 style="font-family:'Playfair Display',serif">Send Us Your Requirements</h3>
-          <form id="contact-form" action="https://formspree.io/f/abcd1234" method="POST">
+          <form id="contact-form" action="https://formspree.io/f/xjkejdyb" method="POST">
             <div class="form-group"><input name="name" placeholder="Your Name" required></div>
             <div class="form-group"><input type="email" name="email" placeholder="Your Email" required></div>
             <div class="form-group"><input type="tel" name="phone" placeholder="Your Phone"></div>
@@ -1262,3 +1261,4 @@
   </script>
 </body>
 </html>
+
